@@ -1,0 +1,18 @@
+## Where AI Was Used and What I Fixed
+
+1. USED: Claude suggested the overall structure of the
+   weather fetch function including try/except error handling
+   and the timeout parameter.
+
+   FIXED: AI initially suggested calling the API once per
+   booking row (1,500+ calls). I changed this to one call
+   per city covering the full date range — reducing calls
+   to 2 total as required by the assignment's batching rule.
+
+2. USED: Claude suggested the merge logic using left join
+   on checkin_date + property_city.
+
+   FIXED: AI used wrong column names initially ('date' and
+   'city') that didn't match the booking dataframe columns.
+   I added the rename step before merging to align the
+   join keys correctly.
